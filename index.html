@@ -42,11 +42,43 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(10deg); }
         }
+        #test-content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <div class="crane-emoji">🏗️</div>
-    <h1>We’re building something awesome!</h1>
-    <p>Hang tight, we’ll be ready soon <span class="wave">👋</span></p>
+    <div id="default-content">
+        <div class="crane-emoji">🏗️</div>
+        <h1>We're building something awesome!</h1>
+        <p>Hang tight we'll be ready soon <span class="wave">👋</span></p>
+    </div>
+    
+    <div id="test-content">
+        <h1>HI!!</h1>
+    </div>
+
+    <script>
+        // Function to check the current path
+        function checkPath() {
+            // Get the current path
+            const path = window.location.pathname;
+            
+            // Check if the path is "/test"
+            if (path === "/test") {
+                // Show the test content and hide the default content
+                document.getElementById("test-content").style.display = "block";
+                document.getElementById("default-content").style.display = "none";
+            }
+        }
+        
+        // Run the check when the page loads
+        window.onload = checkPath;
+    </script>
 </body>
 </html>
