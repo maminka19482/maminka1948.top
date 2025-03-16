@@ -56,7 +56,7 @@
     <div id="default-content">
         <div class="crane-emoji">🏗️</div>
         <h1>We're building something awesome!</h1>
-        <p>Hang tight we'll be ready soon <span class="wave">👋</span></p>
+        <p>Hang tight, we'll be ready soon <span class="wave">👋</span></p>
     </div>
     
     <div id="test-content">
@@ -64,13 +64,14 @@
     </div>
 
     <script>
-        // Function to check the current path
-        function checkPath() {
-            // Get the current path
-            const path = window.location.pathname;
+        // Function to check URL parameters
+        function checkParameters() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
             
-            // Check if the path is "/test"
-            if (path === "/test") {
+            // Check if the page parameter is "test"
+            if (page === "test") {
                 // Show the test content and hide the default content
                 document.getElementById("test-content").style.display = "block";
                 document.getElementById("default-content").style.display = "none";
@@ -78,7 +79,7 @@
         }
         
         // Run the check when the page loads
-        window.onload = checkPath;
+        window.onload = checkParameters;
     </script>
 </body>
 </html>
