@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/2VbYFzx.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.1;
+        }
+        .content {
+            position: relative;
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .blink {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #ff9800;
+            animation: blinkText 1s infinite alternate;
+        }
+        @keyframes blinkText {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1>Under Construction</h1>
+        <p class="blink">We’ll be back soon!</p>
+    </div>
+</body>
+</html>
