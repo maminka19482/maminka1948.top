@@ -4,36 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Construction</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 30px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: #3498db;
+        }
+        
+        .content {
+            padding-top: 80px;
+        }
+        
+        .crane-emoji {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #444;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            color: #777;
+            margin-top: 5px;
+        }
+        
+        .wave {
+            display: inline-block;
+            animation: waveAnimation 1s infinite alternate;
+        }
+        
+        @keyframes waveAnimation {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(10deg); }
+        }
+    </style>
 </head>
 <body>
-    <div id="default-content">
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="test.html">Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
         <div class="crane-emoji">🏗️</div>
         <h1>We're building something awesome!</h1>
         <p>Hang tight, we'll be ready soon <span class="wave">👋</span></p>
     </div>
-    
-    <div id="test-content">
-        <h1>HI!!</h1>
-    </div>
-
-    <script>
-        // Function to check URL parameters
-        function checkParameters() {
-            // Get URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const page = urlParams.get('page');
-            
-            // Check if the page parameter is "test"
-            if (page === "test") {
-                // Show the test content and hide the default content
-                document.getElementById("test-content").style.display = "block";
-                document.getElementById("default-content").style.display = "none";
-            }
-        }
-        
-        // Run the check when the page loads
-        window.onload = checkParameters;
-    </script>
 </body>
 </html>
